@@ -164,6 +164,10 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
             startActivityFromClass(CreateTransactionActivity::class)
         }
 
+        game_view.setOnClickListener {
+            startActivityFromClass(org.moire.opensudoku.gui.FolderListActivity::class)
+        }
+
         fab.setOnClickListener {
             startScanActivityForResult(this)
         }
