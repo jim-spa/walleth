@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WALLΞTH</string>
+    <string name="app_name">Tyle WALLΞT</string>
     <string name="welcome">ようこそ、\n\n まだアカウントがないようです - 1 つ作成しました。 注意 - このアカウントは簡単に利用できるようにパスワードがないため安全ではありません - そのため熱い飲み物が冷めない間 walleth を試すだけにご利用ください。</string>
     <string name="request_transaction_subtitle">トランザクションのリクエスト</string>
     <string name="edit_account_subtitle">アカウントを編集</string>
@@ -8,7 +8,7 @@
     <string name="transaction_subtitle">トランザクションの詳細</string>
 
     <string name="scan_instructions">QR コードをフレームの中心にしてください。</string>
-    <string name="no_camera_permission">WALLΞTH はカメラにアクセスするアクセス許可がありません。</string>
+    <string name="no_camera_permission">Tyle WALLΞT はカメラにアクセスするアクセス許可がありません。</string>
 
     <string name="request_subtitle">リクエスト</string>
     <string name="drawer_open">開く</string>
@@ -22,7 +22,7 @@
 <br/><br/>
 このアルファは <a href="http://www.rinkeby.io">rinkeby</a> testnet を使用します。
 <br/><br/>
-WALLΞTH は可能な限り分散化しようとしています。 したがって、集中型の事前構成済みのノードではなく、軽いクライアントを使用しています。 残念ながら、まだ完全に分散化することはできません。
+Tyle WALLΞT は可能な限り分散化しようとしています。 したがって、集中型の事前構成済みのノードではなく、軽いクライアントを使用しています。 残念ながら、まだ完全に分散化することはできません。
 (フィアット) 参照の為替レートを取得するために、<a href="https://www.cryptocompare.com">cryptocompare</> に照会し、素晴らしい <a href="https://etherscan.io">etherscan.io</a> サービスを使用してトランダクションを取得します。 何かの理由でこれらのサービスがダウンしてもアプリは動作しますが、為替レートの更新などの一部の機能は使えません。 これらのものが分散化されて入手できるようになると、すぐにそれを使用しようとします。
 <br/><br/>
 素晴らしいアイコンは <a href="https://cookicons.co">Michael Cook</a> の作成です。
@@ -32,7 +32,7 @@ WALLΞTH は可能な限り分散化しようとしています。 したがっ�
 <br/><br/>
 プロジェクトは <a href="http://ligi.de">ligi</a> によって、ウォレットとしてのみの必要性からだけでなく <a href="http://espass.it">espass</a> プロジェクトのビルディングブロックとして始まりました
 <br/><br/>
-プロジェクトは無料のソフトウェアです (別名 FOSS/フリー/オープンソース) - <a href="https://github.com/walleth">WALLΞTH GitHub 組織</a> でコードを見たり、問題を報告することができます
+プロジェクトは無料のソフトウェアです (別名 FOSS/フリー/オープンソース) - <a href="https://github.com/walleth">Tyle WALLΞT GitHub 組織</a> でコードを見たり、問題を報告することができます
 <br/><br/>
 このアプリですばらしい時間をお過ごしください。フィードバック、寄付、プルリクエストをお待ちしています ..-)
 <br/><br/>
@@ -84,7 +84,7 @@ WALLΞTH は可能な限り分散化しようとしています。 したがっ�
     <string name="please_enter_name">名前を入力してください</string>
     <string name="share">共有</string>
     <string name="print">印刷</string>
-    <string name="paper_wallet_title">WALLΞTH ペーパー Ethereum ウォレット</string>
+    <string name="paper_wallet_title">Tyle WALLΞT ペーパー Ethereum ウォレット</string>
     <string name="paper_wallet_text">これはあなたの Ethereum アカウントのプライベートキー（秘密鍵）です - 安全に保管し、対応するパスワードを合わせて忘れないようにしてください。</string>
     <string name="imported_key_alert_message">%s をインポートしました</string>
     <string name="imported_key_default_entry_name">インポートしました</string>
