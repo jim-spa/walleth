@@ -132,7 +132,17 @@ configurations {
     androidTestCompile.exclude module: 'kotlin-stdlib'
 }
 
+repositories {
+    jcenter()
+    flatDir {
+        dirs '/cryptosecure/studio/tyle-opensudoku/app/build/outputs/aar'
+    }
+}
+
 dependencies {
+    compile fileTree(dir: '/cryptosecure/studio/tyle-kethereum/*/build/libs', include: ['*.jar'])
+    compile(name:'app-debug', ext:'aar')
+
     compile "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.21.2"
     compile 'com.android.support:multidex:1.0.2'
     androidTestCompile 'com.android.support:multidex:1.0.2'

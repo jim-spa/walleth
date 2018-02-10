@@ -2,9 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-            android:id="@+id/menu_switch_network"
-            android:title="@string/nav_drawer_switch_network"
-            android:icon="@drawable/ic_assistant_photo"/>
+        android:id="@+id/menu_play_sudoku"
+        android:title="@string/nav_drawer_play_sudoku"
+        android:icon="@drawable/sudoku_icon"/>
+
+    <item
+        android:id="@+id/menu_switch_network"
+        android:title="@string/nav_drawer_switch_network"
+        android:icon="@drawable/ic_assistant_photo"/>
 
     <item
             android:id="@+id/menu_edit"

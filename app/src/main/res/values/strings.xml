@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WALLΞTH</string>
+    <string name="app_name">Tyle WALLΞT</string>
     <string name="welcome">Welcome,\n\n there was no account for you yet - so one was created. Note - this one is not secured with any password for easy use - so only use it as a hot walleth for a few beverages. Also be aware that this alpha operates currently on the rinkeby network only.</string>
     <string name="request_transaction_subtitle">Request Transaction</string>
     <string name="edit_account_subtitle">Edit Account</string>
@@ -8,7 +8,7 @@
     <string name="transaction_subtitle">Transaction details</string>
 
     <string name="scan_instructions">Center a QR code inside the frame.</string>
-    <string name="no_camera_permission">WALLΞTH does not have permission to access the camera.</string>
+    <string name="no_camera_permission">Tyle WALLΞT does not have permission to access the camera.</string>
 
     <string name="request_subtitle">Request</string>
     <string name="drawer_open">open</string>
@@ -22,7 +22,7 @@ Big shout out to <a href="https://github.com/karalabe">karalabe</a>, <a href="ht
 <br/><br/>
 This alpha uses the <a href="http://www.rinkeby.io">rinkeby</a> testnet.
 <br/><br/>
-WALLΞTH is trying to be as decentralized as possible. Hence it is using a light client and not centralized pre-configured nodes. Unfortunately we cannot be fully decentralized yet.
+Tyle WALLΞT is trying to be as decentralized as possible. Hence it is using a light client and not centralized pre-configured nodes. Unfortunately we cannot be fully decentralized yet.
 For getting the exchange rates for (fiat) references we are querying <a href="https://www.cryptocompare.com">cryptocompare</> and to get transactions we use the great <a href="https://etherscan.io">etherscan.io</a> service. The app will work if these services are down for some reason - but you might miss some features like up to date exchange rates. As soon as it is possible to get these things in a decentralized manner we will try to use it.
 <br/><br/>
 Our wonderful Icon is from <a href="https://cookicons.co">Michael Cook</a>.
@@ -32,7 +32,7 @@ Be aware that this is an alpha and there will be bugs. There are also some known
 <br/><br/>
 The project was started by <a href="http://ligi.de">ligi</a> as this is not only needed as a wallet - but also as a building block for the <a href="http://espass.it">espass</a> project
 <br/><br/>
-The project is libre software (aka FOSS/free/open source) - you can find code and open issues on the <a href="https://github.com/walleth">WALLΞTH GitHub Organisation</a>
+The project is libre software (aka FOSS/free/open source) - you can find code and open issues on the <a href="https://github.com/walleth">Tyle WALLΞT GitHub Organisation</a>
 <br/><br/>
 Please have a great time with this app and we are happy about feedback, donations, pull-requests ..-)
 <br/><br/>
@@ -89,7 +89,7 @@ Unfortunately there is no faucet for the test-net. So if you want to try out thi
     <string name="please_enter_name">Please enter a name</string>
     <string name="share">Share</string>
     <string name="print">Print</string>
-    <string name="paper_wallet_title">WALLΞTH Paper Ethereum Wallet</string>
+    <string name="paper_wallet_title">Tyle WALLΞT Paper Ethereum Wallet</string>
     <string name="paper_wallet_text">This is the private key for your Ethereum account - store it safely and remember the corresponding password.</string>
     <string name="imported_key_alert_message">Imported %s</string>
     <string name="imported_key_default_entry_name">Imported</string>
@@ -102,6 +102,7 @@ Unfortunately there is no faucet for the test-net. So if you want to try out thi
     <string name="saf_activity_not_found_problem">No App found to handle ACTION_OPEN_DOCUMENT - please report this as a problem to your phone-/ROM-provider</string>
     <string name="transaction_to_use_hint">Transaction to use</string>
     <string name="no_funds_after_fee">No funds left with the given fee</string>
+    <string name="nav_drawer_play_sudoku">Play Sudoku</string>
     <string name="nav_drawer_switch_network">Switch network</string>
     <string name="nav_drawer_edit_account">Edit account</string>
     <string name="nav_drawer_switch_account">Switch account</string>
@@ -139,7 +140,7 @@ Unfortunately there is no faucet for the test-net. So if you want to try out thi
     <string name="create_tx_error_invalid_erc67_title">Invalid ERC67</string>
     <string name="create_tx_error_invalid_address">%s is not a valid Ethereum-Address</string>
     <string name="default_account_name">Default Account</string>
-    <string name="new_address_note">This Account was created for you when WALLΞTH started for the first time</string>
+    <string name="new_address_note">This Account was created for you when Tyle WALLΞT started for the first time</string>
     <string name="request_funds_add_value">Add Value</string>
     <string name="request_funds_value_hint">Value</string>
     <string name="trezor_custom_derivation_path">Custom</string>

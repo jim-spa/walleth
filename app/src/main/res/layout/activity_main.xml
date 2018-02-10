@@ -53,9 +53,10 @@
         </FrameLayout>
     </LinearLayout>
 
-
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
+    <LinearLayout
+        android:id="@+id/ether_descr"
+        android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
                   android:layout_below="@id/top_container"
                   android:orientation="horizontal">
 
@@ -89,6 +90,33 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/game_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/ether_descr"
+        android:orientation="vertical">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="@drawable/sudoku_icon"
+            android:duplicateParentState="true"
+            android:id="@+id/game_icon"/>
+        <TextView
+            android:id="@+id/sudoku_descr"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:text="Play Sudoku"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_margin="16dp"

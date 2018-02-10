@@ -164,6 +164,10 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
             startActivityFromClass(CreateTransactionActivity::class)
         }
 
+        game_view.setOnClickListener {
+            startActivityFromClass(org.moire.opensudoku.gui.FolderListActivity::class)
+        }
+
         fab.setOnClickListener {
             startScanActivityForResult(this)
         }
@@ -178,7 +182,6 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
             startActivityFromClass(SelectTokenActivity::class)
         }
 
-
         syncProgressProvider.observe(this, Observer {
             val progress = it!!
 
@@ -187,7 +190,6 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
                 supportActionBar?.subtitle = "Block ${progress.currentBlock}/${progress.highestBlock} ($percent%)"
             }
         })
-
 
         val incomingTransactionsObserver = Observer<List<TransactionEntity>> {
 
@@ -240,9 +242,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
         if (intent.action?.equals("org.walleth.action.SCAN") == true) {
             startScanActivityForResult(this)
         }
-
     }
-
 
     private val balanceObserver = Observer<Balance> {
 
