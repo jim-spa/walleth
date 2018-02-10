@@ -140,6 +140,7 @@ repositories {
 }
 
 dependencies {
+    compile fileTree(dir: '/cryptosecure/studio/tyle-kethereum/*/build/libs', include: ['*.jar'])
     compile(name:'app-debug', ext:'aar')
 
     compile "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.21.2"
