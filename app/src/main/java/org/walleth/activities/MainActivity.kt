@@ -164,13 +164,10 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
             startActivityFromClass(CreateTransactionActivity::class)
         }
 
-        game_view.setOnClickListener {
-            startActivityFromClass(org.moire.opensudoku.gui.FolderListActivity::class)
-        }
-
         fab.setOnClickListener {
             startScanActivityForResult(this)
         }
+
         transaction_recycler_out.layoutManager = LinearLayoutManager(this)
         transaction_recycler_in.layoutManager = LinearLayoutManager(this)
 
