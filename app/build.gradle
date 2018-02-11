@@ -138,14 +138,10 @@ configurations {
 
 repositories {
     jcenter()
-    flatDir {
-        dirs '/cryptosecure/studio/tyle-opensudoku/app/build/outputs/aar'
-    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: '/cryptosecure/studio/tyle-kethereum/*/build/libs')
-    implementation 'org.moire.opensudoku:app-debug@aar'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.21.2'
     implementation 'com.android.support:multidex:1.0.2'
     androidTestImplementation 'com.android.support:multidex:1.0.2'

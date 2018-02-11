@@ -37,7 +37,6 @@ class WalletNavigationFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         val idToClassMap = mapOf(
-                R.id.menu_play_sudoku to org.moire.opensudoku.gui.FolderListActivity::class,
                 R.id.menu_switch_network to SwitchNetworkActivity::class,
                 R.id.menu_debug to DebugWallethActivity::class,
                 R.id.menu_edit to EditAccountActivity::class,
