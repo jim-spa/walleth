@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
@@ -14,8 +14,6 @@ android {
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        applicationId "org.walleth"
-
         minSdkVersion 15
         targetSdkVersion 26
 
@@ -127,20 +125,24 @@ spoon {
 configurations {
 
     // http://stackoverflow.com/questions/30578243/why-would-adding-espresso-contrib-cause-an-inflateexception
-    androidTestImplementation.exclude group: 'com.android.support', module: 'appcompat-v7'
-    androidTestImplementation.exclude group: 'com.android.support', module: 'design'
-    androidTestImplementation.exclude group: 'com.android.support', module: 'support-v4'
-    androidTestImplementation.exclude group: 'com.android.support', module: 'support-annotations'
-    androidTestImplementation.exclude group: 'com.android.support', module: 'preference-v7'
+    //androidTestImplementation.exclude group: 'com.android.support', module: 'appcompat-v7'
+    //androidTestImplementation.exclude group: 'com.android.support', module: 'design'
+    //androidTestImplementation.exclude group: 'com.android.support', module: 'support-v4'
+    //androidTestImplementation.exclude group: 'com.android.support', module: 'support-annotations'
+    //androidTestImplementation.exclude group: 'com.android.support', module: 'preference-v7'
     androidTestImplementation.exclude module: 'recyclerview-v7'
     androidTestImplementation.exclude module: 'kotlin-stdlib'
 }
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
+
+    implementation 'com.google.guava:guava:22.0-android'
+
     implementation fileTree(include: ['*.jar'], dir: '/cryptosecure/studio/tyle-kethereum/*/build/libs')
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.21.2'
     implementation 'com.android.support:multidex:1.0.2'
@@ -180,7 +182,7 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:$arch_version"
     kapt "android.arch.persistence.room:compiler:$arch_version"
     kapt "android.arch.lifecycle:compiler:$arch_version"
-    androidTestCompile "com.google.truth:truth:$truth"
+    androidTestImplementation "com.google.truth:truth:$truth"
     testImplementation 'org.mockito:mockito-core:2.8.47'
     androidTestImplementation 'org.mockito:mockito-core:2.8.47'
     androidTestImplementation 'com.linkedin.dexmaker:dexmaker-mockito:2.2.0'

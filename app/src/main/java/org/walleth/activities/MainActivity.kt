@@ -2,6 +2,7 @@ package org.walleth.activities
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.Observer
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
@@ -11,6 +12,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.AttributeSet
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View.INVISIBLE
@@ -42,7 +44,7 @@ import org.walleth.ui.TransactionRecyclerAdapter
 import java.math.BigInteger.ZERO
 
 
-class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
+open class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
 
     private val lazyKodein = LazyKodein(appKodein)
 

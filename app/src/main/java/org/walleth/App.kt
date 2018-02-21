@@ -1,3 +1,5 @@
+@file:JvmName("TyleWallet")
+
 package org.walleth
 
 import android.arch.persistence.room.Room
@@ -7,6 +9,7 @@ import android.os.StrictMode
 import android.support.multidex.MultiDex
 import android.support.multidex.MultiDexApplication
 import android.support.v7.app.AppCompatDelegate
+import android.util.Log
 import com.chibatching.kotpref.Kotpref
 import com.github.salomonbrys.kodein.*
 import com.github.salomonbrys.kodein.android.appKodein
@@ -16,6 +19,7 @@ import kotlinx.coroutines.experimental.CommonPool
 import kotlinx.coroutines.experimental.async
 import okhttp3.OkHttpClient
 import org.kethereum.model.Address
+import org.ligi.kroom.R.id.async
 import org.ligi.tracedroid.TraceDroid
 import org.walleth.core.EtherScanService
 import org.walleth.core.TransactionNotificationService
@@ -33,6 +37,8 @@ import org.walleth.data.networks.InitializingCurrentAddressProvider
 import org.walleth.data.networks.NetworkDefinitionProvider
 import org.walleth.data.syncprogress.SyncProgressProvider
 import org.walleth.data.tokens.CurrentTokenProvider
+import timber.log.Timber
+
 
 open class App : MultiDexApplication(), KodeinAware {
 
@@ -83,6 +89,8 @@ open class App : MultiDexApplication(), KodeinAware {
                     .detectAll()
                     .penaltyLog()
                     .build())
+            Timber.plant(Timber.DebugTree())
+            Log.d("app", "Timber started in App")
         }
 
         Kotpref.init(this)
@@ -136,11 +144,24 @@ open class App : MultiDexApplication(), KodeinAware {
         try {
             startService(Intent(this, EtherScanService::class.java))
             startService(Intent(this, TransactionNotificationService::class.java))
-        } catch (e: IllegalStateException) {  }
+        } catch (e: IllegalStateException) {
+        }
+    }
+
+    open fun getCurrentTokenProvider(): CurrentTokenProvider {
+        return kodein.instance()
+    }
+
+    open fun getCurrentAddressProvider(): CurrentAddressProvider {
+        return kodein.instance()
+    }
+
+    open fun getNetworkDefinitionProvider(): NetworkDefinitionProvider {
+        return kodein.instance()
     }
 
     companion object {
-        val postInitCallbacks = mutableListOf<()->Unit>()
+        val postInitCallbacks = mutableListOf<() -> Unit>()
 
         fun applyNightMode(settings: Settings) {
             @AppCompatDelegate.NightMode val nightMode = settings.getNightMode()
