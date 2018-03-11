@@ -91,6 +91,30 @@
                 android:layout_height="match_parent"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/game_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/ether_descr"
+        android:orientation="vertical">
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:duplicateParentState="true"
+            android:id="@+id/game_icon"/>
+        <TextView
+            android:id="@+id/game_descr"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_margin="16dp"
