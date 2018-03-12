@@ -79,7 +79,8 @@ public class TyleSdk implements Application.ActivityLifecycleCallbacks, KodeinAw
         }
     }
 
-    public void init(App sdkApp, Activity mainActivity, int mainIcon, String mainDescr) {
+    // Prevents subclassing SDK and allows for better control of object creation
+    private TyleSdk(App sdkApp, Activity mainActivity, int mainIcon, String mainDescr) {
         networkDefinitionProvider = sdkApp.getNetworkDefinitionProvider();
         currentAddressProvider = sdkApp.getCurrentAddressProvider();
         currentTokenProvider = sdkApp.getCurrentTokenProvider();
@@ -90,6 +91,11 @@ public class TyleSdk implements Application.ActivityLifecycleCallbacks, KodeinAw
         TyleSdk.mainIcon = mainIcon;
         TyleSdk.mainDescr = mainDescr;
         sdkApp.registerActivityLifecycleCallbacks(this);
+    }
+
+    // Give user a factory of some sort to create an instance, can even make Singleton if we only want one
+    public static TyleSdk newInstance(App sdkApp, Activity mainActivity, int mainIcon, String mainDescr) {
+        return new TyleSdk(sdkApp, mainActivity, mainIcon, mainDescr);
     }
 
     @Override
