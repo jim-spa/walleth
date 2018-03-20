@@ -2,11 +2,8 @@
 package org.walleth.activities
 
 import android.app.Activity
-import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import kotlinx.android.synthetic.main.activity_main.*
-import org.kethereum.erc681.isEthereumURLString
 import org.ligi.kaxt.startActivityFromClass
 
 class SdkMainActivity : MainActivity() {
