@@ -59,6 +59,12 @@ public class TyleSdk implements Application.ActivityLifecycleCallbacks, KodeinAw
                         currentTokenProvider.getCurrentToken()));
     }
 
+    private void transactionEntitiesRefresh(List<TransactionEntity> transactionEntities) {
+        if (transactionEntities != null) {
+            refresh();
+        }
+    }
+
     public void installTransactionObservers(LifecycleOwner owner) {
         if (currentAddressProvider.getValue() == null) {
             Address currentAddress = currentAddressProvider.getCurrent();
@@ -66,16 +72,8 @@ public class TyleSdk implements Application.ActivityLifecycleCallbacks, KodeinAw
             incomingTransactionsForAddress = sdkApp.getAppDatabase().getTransactions().getIncomingTransactionsForAddressOnChainOrdered(currentAddress, currentChain);
             outgoingTransactionsForAddress = sdkApp.getAppDatabase().getTransactions().getOutgoingTransactionsForAddressOnChainOrdered(currentAddress, currentChain);
 
-            incomingTransactionsForAddress.observe(owner, transactionEntities -> {
-                if (transactionEntities != null) {
-                    refresh();
-                }
-            });
-            outgoingTransactionsForAddress.observe(owner, transactionEntities -> {
-                if (transactionEntities != null) {
-                    refresh();
-                }
-            });
+            incomingTransactionsForAddress.observe(owner, this::transactionEntitiesRefresh);
+            outgoingTransactionsForAddress.observe(owner, this::transactionEntitiesRefresh);
         }
     }
 
