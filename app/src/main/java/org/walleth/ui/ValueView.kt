@@ -38,6 +38,7 @@ open class ValueView(context: Context, attrs: AttributeSet) : LinearLayout(conte
         super.onFinishInflate()
         orientation = VERTICAL
         LayoutInflater.from(context).inflate(layoutRes, this, true)
+        // TODO Should our precise amounts be monetary values as in 2 decimal places (hundredths place)?
         current_eth.setOnClickListener {
             currentToken?.let { tokenNotNull ->
                 showPreciseAmountAlert(currentValue.toFullValueString(tokenNotNull) + current_token_symbol.text )
@@ -74,6 +75,11 @@ open class ValueView(context: Context, attrs: AttributeSet) : LinearLayout(conte
 
         current_token_symbol.text = token.symbol
 
+        /* setVisibility is a wrapper for the setVisibility method in the android View class
+
+           The method takes a boolean and sets the visibility to View.VISIBLE if the parameter passed in
+           is true and View.GONE value for false. The default second parameter is the integer value of
+           View.GONE. */
         current_fiat_symbol.setVisibility(token.isETH())
         current_fiat.setVisibility(token.isETH())
 
